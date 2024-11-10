@@ -1,4 +1,4 @@
-﻿namespace Task_Tracker_CLI.Task
+﻿namespace Task_Tracker_CLI
 {
     public class Task
     {
@@ -10,14 +10,14 @@
         //createdAt: The date and time when the task was created
         //updatedAt: The date and time when the task was last updated
 
-        private string id;
+        private int id;
         private string description;
         private string status;
         private DateTime createdAt;
         private DateTime updatedAt;
 
         // Setter and getter
-        public string Id
+        public int Id
         {
             get { return id; }
             set { id = value; }
@@ -48,7 +48,7 @@
         }
 
         // Constructor with args
-        public Task(string id, string description, string status, DateTime createdAt, DateTime updatedAt)
+        public Task(int id, string description, string status, DateTime createdAt, DateTime updatedAt)
         {
             this.id = id;
             this.description = description;
@@ -60,7 +60,7 @@
         // Constructor withour args
         public Task()
         {
-            this.id = "";
+            this.id = 0;
             this.description = "";
             this.status = "todo";
             this.createdAt = DateTime.Now;
@@ -68,7 +68,7 @@
 
         public void clearTask()
         {
-            this.id = "";
+            this.id = 0;
             this.description = "";
             this.status = "todo";
             this.createdAt = DateTime.Now;
